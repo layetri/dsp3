@@ -1,0 +1,14 @@
+# Executables
+*.out
+allpassfilter
+allpass_filter_1
+
+# Binary output
+obj/*.o
+
+# Editor files
+.vscode/
+allpass_filter_1.dSYM/
+
+# Various junk
+allpass_filter_1.cpp
