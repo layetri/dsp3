@@ -2,7 +2,7 @@
 
 CC=g++
 CFLAGS = -I/usr/local/include -Wall -std=c++14
-LDFLAGS= -ljack
+LDFLAGS=
 
 SRC_DIR=src
 OBJ_DIR=obj

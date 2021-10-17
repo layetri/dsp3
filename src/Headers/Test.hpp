@@ -4,7 +4,7 @@ struct Test {
     Test() {};
     ~Test() {};
 
-    static void assertEqual(float value, int place) {
+    static void assertEqualResponse(float value, int place) {
         double assertion[] = {0.167772, 0, 0, 0, 0, 0, 0, 0, -0.971853, 0, 0, 0, 0, 0, 0, 0, -0.16305, 0, 0, 0, 0, 0, 0, 0, -0.0273552};
 
         if(place < sizeof(assertion)) {

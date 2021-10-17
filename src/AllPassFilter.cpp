@@ -1,5 +1,4 @@
 #include "Headers/AllPassFilter.hpp"
-#include <iostream>
 
 AllPassFilter::AllPassFilter(Coefficients* input_coefficients, Buffer *input_buffer, Buffer* output_buffer) : Filter(input_coefficients, input_buffer, output_buffer) {
     delay_line = new Buffer(8);

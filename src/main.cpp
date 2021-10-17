@@ -24,7 +24,7 @@ int main() {
     while(cycle < OUTPUT_LENGTH) {
         allpass.process_DF2();
 
-        Test::assertEqual(output.get(), cycle);
+        Test::assertEqualResponse(output.get(), cycle);
         
         impulse.tick();
         output.tick();
