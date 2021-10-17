@@ -4,6 +4,7 @@ struct Buffer {
     Buffer(int size);
     ~Buffer();
 
+    void wipe();
     void tick();
 
     double get();
@@ -13,7 +14,6 @@ struct Buffer {
     void write(double sample);
 
     private:
-        // Create a data array
         double* data;
 
         int size;

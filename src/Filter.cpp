@@ -1,7 +1,5 @@
 #include "Headers/Filter.hpp"
 
-#include <iostream>
-
 Filter::Filter(Coefficients* coefficients, Buffer* input_buffer, Buffer* output_buffer) {
     input = input_buffer;
     output = output_buffer;

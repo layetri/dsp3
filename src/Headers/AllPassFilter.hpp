@@ -8,4 +8,6 @@ struct AllPassFilter : public Filter {
 
     void process_DF1();
     void process_DF2();
+
+    Buffer* delay_line;
 };

@@ -1,5 +1,4 @@
 #include "Headers/Buffer.hpp"
-#include <iostream>
 
 Buffer::Buffer(int size) {
     data = new double[size];
@@ -11,8 +10,14 @@ Buffer::~Buffer() {
     delete[] data;
 }
 
+void Buffer::wipe() {
+    for(int i = 0; i < size; i++) {
+        data[i] = 0.00;
+    }
+}
+
 void Buffer::tick() {
-    position = (position + 1) * (position < size);
+    position = (position + 1) * (position < size - 1);
 }
 
 void Buffer::write(double sample) {
@@ -24,12 +29,11 @@ double Buffer::get() {
 }
 
 double Buffer::getFromPast(int places) {
-    // std::cout << wrap(position - places) << ": " << data[wrap(position - places)] << std::endl;
     return data[wrap(position - places)];
 }
 
 int Buffer::wrap(int pos) {
-    return ((0 < pos < size) * pos) +
+    return ((0 <= pos && pos < size) * pos) +
            ((pos < 0) * (size + pos)) +
            ((pos > size) * (pos % size));
 }
